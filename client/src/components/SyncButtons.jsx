@@ -7,33 +7,33 @@ const SyncButtons = ({ onSync }) => {
   const syncShopify = async () => {
     try {
       const res = await API.post('/sync/shopify');
-      toast.success(res.data.message || '✅ Shopify order synced successfully');
+      toast.success(res.data.message || 'Shopify order synced successfully');
       onSync();
     } catch (err) {
       console.error('Shopify sync failed', err);
-      toast.error(err.response?.data?.error || '❌ Shopify sync failed');
+      toast.error(err.response?.data?.error || 'Shopify sync failed');
     }
   };
 
   const syncAmazon = async () => {
     try {
       const res = await API.post('/sync/amazon');
-      toast.success(res.data.message || '✅ Amazon order synced successfully');
+      toast.success(res.data.message || 'Amazon order synced successfully');
       onSync();
     } catch (err) {
       console.error('Amazon sync failed', err);
-      toast.error(err.response?.data?.error || '❌ Amazon sync failed');
+      toast.error(err.response?.data?.error || 'Amazon sync failed');
     }
   };
 
   const syncEbay = async () => {
     try {
       const res = await API.post('/sync/ebay');
-      toast.success(res.data.message || '✅ eBay order synced successfully');
+      toast.success(res.data.message || 'eBay order synced successfully');
       onSync();
     } catch (err) {
       console.error('eBay sync failed', err);
-      toast.error(err.response?.data?.error || '❌ eBay sync failed');
+      toast.error(err.response?.data?.error || 'eBay sync failed');
     }
   };
 
