@@ -6,11 +6,9 @@ require('dotenv').config();
 const app = express();
 
 // Middleware
-app.use(cors(
-  {
-    origin: 'https://vercel.com/swapnil2804rajs-projects/multi-channel-order-sync-tracker', // Replace with your frontend URL
-  }
-));
+app.use(cors({
+  origin: 'https://multi-channel-order-sync-tracker.vercel.app'  // <-- Replace with your actual frontend URL
+}));
 app.use(express.json());
 
 // Routes
