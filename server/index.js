@@ -7,7 +7,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'https://multi-channel-order-sync-tracker.vercel.app'  // <-- Replace with your actual frontend URL
+  origin: 'https://multi-channel-order-sync-tracker-uc.vercel.app',         // Replace with your frontend URL
 }));
 app.use(express.json());
 
