@@ -22,6 +22,24 @@ The project was tackled by breaking the problem down into smaller, manageable pa
 - **Deployment**: Vercel (frontend), Render (backend)
 
 ---
+## How to Use the Multi-Channel Order Sync Tracker
+
+1️⃣ **Sync Orders**
+- On the main dashboard, you'll see buttons to sync orders from Shopify, Amazon, or eBay.
+- Click on the button for the channel you want to sync.
+- A new order will be generated with a default status of `PENDING` and shown in the table immediately.
+
+2️⃣ **Status Update**
+- After around `7 seconds`, the app will automatically update the order's status to either `SUCCESS` or `FAILED`(simulates real-world API processing).
+- Failed orders will display a `Retry` button in `Action` Section of tabke. You can click it to attempt resyncing that order which will take around `8 seconds` and automatically update the order's status.
+
+3️⃣ **View Analytics / Statistics**
+- Click on the Analytics button on the dashboard (below the sync buttons).
+- This page shows:
+    - Total orders
+    - Orders by status (success, failed, pending)
+    - A pie chart breaking down orders by sales channel.
+---
 
 ## Frontend Overview  
 The frontend is built with **React** and styled using **Tailwind CSS**. It consists of two main pages:
