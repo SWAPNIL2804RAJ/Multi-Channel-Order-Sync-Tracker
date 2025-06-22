@@ -115,10 +115,10 @@ json
 ### Sync Behavior:
 - A random `orderId` is generated which is unique.
 - Items and `totalCost` are randomly created using mock order.
-- Status is set randomly using Math.random() function ~ `(60% success, 40% failure)`
+- Status is set `pending` by default and then chnages randomly using Math.random() function ~ `(60% success, 40% failure)`. To make it realistic i have added a timeout which takes 7 seconds to change the status from `pending` to `success` or `failed`.
 
 ### Retry Behavior:
-- When retrying a failed order, it has a `90%` chance to succeed.
+- When retrying a failed order, it has a `90%` chance to succeed. To make it realistic i have added a timeout which takes 8 seconds to retry the order.
 
 ---
 
