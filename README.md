@@ -103,7 +103,7 @@ Implements randomization so that it could simulate like real-world outcomes:
 Since real integrations with Shopify, Amazon, and eBay APIs were out of scope, So I made mock data of the orders.
 ### Example mock order:
 
-\`\`\`json
+json
 {
   - "orderId": "AMZ123456",
   - "channel": "Amazon",
@@ -111,7 +111,6 @@ Since real integrations with Shopify, Amazon, and eBay APIs were out of scope, S
   - "totalCost": 499,
   - "status": "success"
 }
-\`\`\`
 
 ### Sync Behavior:
 - A random `orderId` is generated which is unique.
