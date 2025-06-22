@@ -90,11 +90,11 @@ Contains business logic for syncing, retrying, and fetching orders.
 Implements randomization so that it could simulate like real-world outcomes:
 
 - **While Sync**:  
-  - ~60% chance of success  
-  - ~40% chance of failure  
+  - ~`60%` chance of `success`  
+  - ~`40%` chance of `failure`  
 
 - **While Retry**:  
-  - ~90% chance of converting failed orders to success, simulating improved reliability
+  - ~`90%` chance of converting failed orders to `success`, simulating improved reliability.
 
 ---
 
@@ -115,10 +115,10 @@ json
 ### Sync Behavior:
 - A random `orderId` is generated which is unique.
 - Items and `totalCost` are randomly created using mock order.
-- Status is set randomly using Math.random() function ~ (60% success, 40% failure)
+- Status is set randomly using Math.random() function ~ `(60% success, 40% failure)`
 
 ### Retry Behavior:
-- When retrying a failed order, it has a 90% chance to succeed.
+- When retrying a failed order, it has a `90%` chance to succeed.
 
 ---
 
