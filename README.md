@@ -105,11 +105,11 @@ Since real integrations with Shopify, Amazon, and eBay APIs were out of scope, S
 
 \`\`\`json
 {
-  "orderId": "AMZ123456",
-  "channel": "Amazon",
-  "items": ["item1", "item2"],
-  "totalCost": 499,
-  "status": "success"
+  - "orderId": "AMZ123456",
+  - "channel": "Amazon",
+  - "items": ["item1", "item2"],
+  - "totalCost": 499,
+  - "status": "success"
 }
 \`\`\`
 
