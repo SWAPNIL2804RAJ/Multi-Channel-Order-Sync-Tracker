@@ -7,7 +7,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'https://multi-channel-order-sync-tracker-uc.vercel.app',         // Replace with your frontend URL
+  origin: 'https://multi-channel-order-sync-tracker-uc.vercel.app',         // Replacing with frontend URL so that it could connect to only this URL
 }));
 app.use(express.json());
 
@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
 
-    console.log('✅ Connected to MongoDB Atlas');
+    console.log('Connected to MongoDB Atlas ✅');
     app.listen(process.env.PORT, () => {
       console.log(` Server running on port ${process.env.PORT}`);
     });

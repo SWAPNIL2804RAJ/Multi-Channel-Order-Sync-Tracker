@@ -1,6 +1,5 @@
 *.env
 
-# ======================================
 # Node dependencies
 /node_modules
 /.pnp
@@ -35,10 +34,7 @@ Thumbs.db
 *.tgz
 *.log
 
-# Optional lock files if you don't want to commit them
-# package-lock.json
-# yarn.lock
-# pnpm-lock.yaml
+
 
 # Optional: Next.js / create-react-app extras (if any)
 /.next

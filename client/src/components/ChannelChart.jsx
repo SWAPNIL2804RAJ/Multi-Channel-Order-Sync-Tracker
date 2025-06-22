@@ -1,7 +1,7 @@
 import React from 'react';
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-const COLORS = ['#8B5CF6', '#10B981', '#F59E0B']; // Vibrant purple, green, amber
+const COLORS = ['#8B5CF6', '#10B981', '#F59E0B']; 
 
 const ChannelChart = ({ orders }) => {
   const data = [

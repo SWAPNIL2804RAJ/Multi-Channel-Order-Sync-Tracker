@@ -40,7 +40,8 @@ const OrdersPage = () => {
       <div className="flex justify-center mb-4">
         <SyncButtons onSync={fetchOrders} />
       </div>
-      {/* Buttons for navigation */}
+
+      {/* Buttons for navigation of pages*/}
         <div className="flex justify-center gap-4 mt-6">
             <Link
                 to="/analytics"

@@ -2,9 +2,9 @@ const express = require('express');
 const router = express.Router();
 const orderController = require('../controllers/orderController');
 
-router.post('/sync/shopify', orderController.syncShopify);          // PoST route to sync a Shopify order 
+router.post('/sync/shopify', orderController.syncShopify);          // POST route to sync a Shopify order 
 
-router.post('/sync/amazon', orderController.syncAmazon);            // POST route to sync Amazon order
+router.post('/sync/amazon', orderController.syncAmazon);            // PoST route to sync Amazon order
 
 router.post('/sync/ebay', orderController.syncEbay);                 // POST route to sync eBay order    
 

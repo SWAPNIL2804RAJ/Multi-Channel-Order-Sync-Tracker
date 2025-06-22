@@ -1,11 +1,10 @@
 const Order = require('../models/Order');
 
 // Mock data for orders from different channels
-// This data simulates orders from Shopify, Amazon, and eBay
-// In a real application, this data would come from the respective APIs or databases.
+// This data simulates orders from Shopify, Amazon, and eBay. In a real application, this data would come from the respective APIs or databases.
 // Each order has a unique ID, channel, items, total cost, and status
-// The status can be 'pending', 'success', or 'failed'.
 // This allows us to test the order syncing functionality without needing real API calls.
+
  const SHOPIFY_ITEMS = [ 
   { items: ['T-shirt', 'Shoes'], totalCost: 1599 },
   { items: ['Hoodie', 'Cap'], totalCost: 1299 },
@@ -50,8 +49,6 @@ exports.syncEbay = async (req, res) => {
 
 // General function to handle order syncing. This function has a prefix, channel name, items, total cost, and response object.
 async function syncOrderHelper(prefix, channel, items, cost, res) {
-
-//   console.log(`Received request to sync ${channel} order`);          To check if the request is received correctly & from which order channel
 
   try {
     const newOrder = new Order({
@@ -114,9 +111,9 @@ exports.retryOrder = async (req, res) => {
       const isSuccess = Math.random() > 0.1;                     // 90% success rate for retry
       order.status = isSuccess ? 'success' : 'failed';
       await order.save();
-    }, 8000);
+    }, 8000);                                                 // It will take 8 seconds to retry the order
 
-    res.status(200).json({ message: 'Retry initiated', order });                // Don't wait for the retry to complete, just acknowledge the request
+    res.status(200).json({ message: 'Retry initiated', order });            // Don't wait for the retry to complete, just acknowledge the request
   } 
   
   catch (err) {
